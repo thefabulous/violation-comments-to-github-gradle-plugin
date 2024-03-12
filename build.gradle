@@ -9,19 +9,20 @@ buildscript {
   classpath 'se.bjurr.gradle:gradle-scripts:2.+'
  }
 }
-project.ext.buildConfig = [
-  repoType: "GRADLE",
-  gradlePlugin: [
-    tags: ['violation', 'static code analysis', 'Checkstyle', 'CPPLint', 'CPPCheck', 'CSSLint', 'Findbugs', 'Flake8', 'PyLint', 'Pep8', 'Mccabe', 'PyFlakes', 'JSHint', 'Lint', 'PerlCritic', 'PMD', 'ReSharper', 'XMLLint']
-  ],
-  violations: [
-    updateReadme: true
-  ]
-]
+//project.ext.buildConfig = [
+//  repoType: "GRADLE",
+//  gradlePlugin: [
+//    tags: ['violation', 'static code analysis', 'Checkstyle', 'CPPLint', 'CPPCheck', 'CSSLint', 'Findbugs', 'Flake8', 'PyLint', 'Pep8', 'Mccabe', 'PyFlakes', 'JSHint', 'Lint', 'PerlCritic', 'PMD', 'ReSharper', 'XMLLint']
+//  ],
+//  violations: [
+//    updateReadme: true
+//  ]
+//]
 apply from: project.buildscript.classLoader.getResource('main.gradle').toURI()
 
 
 dependencies {
+ implementation gradleApi()
  implementation 'se.bjurr.violations:violation-comments-to-github-lib:1.83.1'
  implementation 'se.bjurr.violations:violations-lib:1.156.3'
 }
