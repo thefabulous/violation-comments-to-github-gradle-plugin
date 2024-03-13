@@ -2,6 +2,12 @@
 
 Changelog of violation-comments-to-github-gradle-plugin.
 
+## 1.70.1 (2024-03-13) (Thefabulous fork)
+
+### Features
+
+-  stepping violations-lib to 1.156.8, fixing issue with parsing KOTLINGRADLE compiler output
+
 ## 1.70.0 (2023-03-26)
 
 ### Features
